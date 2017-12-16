@@ -1,3 +1,6 @@
+
+##########################################       MODULE 1   DISCRIPTIVE ANALYSIS   ##############################################
+
 calculate_mean <- function(data){
   #data_len   :length of the data entered
   #data       : the data entered by user(as vector)
@@ -352,6 +355,10 @@ descriptive_analysis<-function(){
   }
 }
 
+
+##########################################       MODULE 2   PREDICTIVE ANALYSIS   ##############################################
+
+
 correlation <- function(X,Y){
   
   n <- length(X)  #n is no. of data points & is same for X and Y
@@ -414,7 +421,7 @@ multiple_regression <- function(x1,x2,y)
   library(matlib)
   inv_mat1 <- inv(mat1)
   coeff_mat <- inv_mat1 %*% mat2
-  
+  #coeff_mat <- solve(mat1,mat2)
   return(coeff_mat)
   
 }
@@ -443,10 +450,23 @@ predictive_analysis<-function(){
       x1 <- as.vector(strsplit(readline(prompt= "Enter data for x1 (comma-separated list) \n"), ",")[[1]])
       x2 <- as.vector(strsplit(readline(prompt= "Enter data for x2 (comma-separated list) \n"), ",")[[1]])
       Y <- as.vector(strsplit(readline(prompt= "Enter data for Y (comma-separated list) \n"), ",")[[1]])
-      
       cm <- multiple_regression(x1,x2,Y)    #cm : coefficient matrix
+      #print(x1)
       cat("\n \n Regression model : \n")
       cat("Y = ",cm[1]," + ",cm[2],"X1 + ",cm[3],"X2")
+      y_est <- (as.numeric(cm[2])*as.numeric(x1)) + (as.numeric(cm[3])*as.numeric(x2)) +as.numeric(cm[1])
+      p <- 3
+      sse <- sum((as.numeric(Y)-(as.numeric(y_est)))**2)
+      cat('\n')
+      #print(sse)
+      #print(y_est)
+      ssr <- sum((as.numeric(y_est)-mean(as.numeric(Y)))**2)
+      #print(ssr)
+      sst <- sse + ssr
+      R2 <- ssr/sst
+      #k <- lm(as.numeric(Y) ~ as.numeric(x1)+as.numeric(x2))
+      #print(summary(k))
+      cat('R-squared value for multiple regression: ',R2)
     }
     
     else{ print('OOPS.....You Have entered a wrong choice.......')}
@@ -454,6 +474,8 @@ predictive_analysis<-function(){
     
   }
 }
+
+##########################################       MODULE 3   PROBABILITY  ANALYSIS   ##############################################
 
 
 fact<-function(number){
@@ -596,6 +618,8 @@ probability_analysis <- function(){
     
   }
 }
+
+##########################################       MODULE 4  DISCRETE DISTRIBUTION   ##############################################
 
 
 discrete_Uniform_Dist <- function(N){
@@ -818,6 +842,9 @@ discete_distribution <- function(){
   }
 }
 
+##########################################       MODULE 5   CONTINUOUS DISTRIBUTION   ##############################################
+
+
 
 uniform<-function(a,b,lower,upper){
   
@@ -965,6 +992,11 @@ cont_distribution<-function(){
     
   }
 }
+
+
+##########################################       MODULE 7   INTERVAL ESTIMATION   ##############################################
+
+
 estimation_of_mean <- function(n,sample_mean,variance,alpha){
   half_alpha <- alpha/2
   z_half_alpha<-qnorm(1-half_alpha)
@@ -1173,6 +1205,9 @@ Interval_estimation<-function(){
     
   }
 }
+
+##########################################       MODULE 8   NON PARAMETRIC ANALYSIS   ##############################################
+
 
 signTest <- function(mew,set,alpha=0.05)
 {
@@ -1452,6 +1487,7 @@ non_parametric <- function(){
   }
 }
 
+##########################################       MODULE 9   VISUALIZATION   ##############################################
 
 
 draw_histogram <- function(data){
@@ -1588,6 +1624,10 @@ Visualizations<-function(){
     
   }
 }
+
+##########################################       MODULE 6   TEST STATISTICS   ##############################################
+
+
 chi_square <- function(sam,sd_pop,alpha){
   
   sam <- as.numeric(sam)
