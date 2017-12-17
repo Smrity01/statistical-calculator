@@ -15,9 +15,9 @@
 ## Prerequisites
 
 Need to install this library: 
->
-> qcc  : QUALITY CONTROL CHARTS, library is used fot pareto.chart()
-> matlib : this library is used for integration function
+>	:libraries
+>	 qcc  : QUALITY CONTROL CHARTS, library is used fot pareto.chart()
+> 	 matlib : this library is used for integration function
 
 ## Assumptions
 
@@ -30,16 +30,17 @@ Need to install this library:
  ### descriptive_analysis()          : function to perform these functions
 				
 
-* calculate_mean(data)         : calculates mean of data(vector taken from user)
+ * calculate_mean(data)         : calculates mean of data(vector taken from user)
+
 
 >
-> data_len   :length of the data entered
-> data        : the data entered by user(as vector)
-> 				 total        : summation of Xi's
+> 	:data_len   :length of the data entered
+> 	data        : the data entered by user(as vector)
+> 	total        : summation of Xi's
 
 * cal_median(data)	 : calculates median of data(vector taken from user)
 
->
+>	:variables: 
 >       data                  :sorted data
 >	data_len             :length of the user entered data
 >	median_element  :first median if data is even no. of length
@@ -57,9 +58,9 @@ Need to install this library:
 * variance(data)  : calculates variance of data(vector taken from user)
 
 >
-> data_len :  length of the data
-> total       : sum of square of Xi's
-> answer   : calculation of variance
+> 	data_len :  length of the data
+> 	total       : sum of square of Xi's
+> 	answer   : calculation of variance
 
 * standard_dev(data)        : calculates standard deviation of data(vector taken from user)
 
@@ -69,9 +70,9 @@ Need to install this library:
 * mean_absolute_dev(data)    : calculates mean absolute deviation of data(vector taken from user)
 
 >
-> sorted    : sorted data
-> data_len : length of the data
-> madev    : mean absolute value of the data
+> 	sorted    : sorted data
+> 	data_len : length of the data
+> 	madev    : mean absolute value of the data
 
 * cal_range(data)         : calculates range of data(vector taken from user)
 
