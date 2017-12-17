@@ -16,7 +16,7 @@
 
 Need to install this library: 
 > qcc  : QUALITY CONTROL CHARTS, library is used fot pareto.chart()
-> matlib : this library is used for integration function
+    matlib : this library is used for integration function
 
 ## Assumptions
 
