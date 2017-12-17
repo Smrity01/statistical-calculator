@@ -16,7 +16,7 @@
 
 Need to install this library: 
 > qcc  : QUALITY CONTROL CHARTS, library is used fot pareto.chart()
-    matlib : this library is used for integration function
+> matlib : this library is used for integration function
 
 ## Assumptions
 
@@ -250,73 +250,75 @@ It compares calculated chi sqaure value from value from table And returns 0 (to 
 > :alpha:level of significance
 
 * Estimation of proportion		: Calculate the interval for proportion for confidence interval (1-alpha)*100
-					estimation_of_proportion(n,theta,alpha)	
-						:n:  number of  elements in the data
-						:theta: proportion 
-						:alpha:level of significance
->Estimation of proportion difference	: Calculate the interval for difference of proportion for confidence interval (1-alpha)*100
-					estimation_of_proportion_diff(n1,theta1,n2,theta2,alpha)	
- 						:n1:  number of  elements in the first data
-						:theta1: first proportion 
-						:alpha:level of significance
-						:n2:  number of  elements in the second data
-						:theta2:second proportion 
+> estimation_of_proportion(n,theta,alpha)	
+> :n:  number of  elements in the data
+> :theta: proportion 
+> :alpha:level of significance
+
+* Estimation of proportion difference	: Calculate the interval for difference of proportion for confidence interval (1-alpha)*100
+> estimation_of_proportion_diff(n1,theta1,n2,theta2,alpha)	
+ > :n1:  number of  elements in the first data
+> :theta1: first proportion 
+> :alpha:level of significance
+> :n2:  number of  elements in the second data
+> :theta2:second proportion 
 						
->Estimation of variance		: Calculate the interval for population variance for confidence interval (1-alpha)*100
-    			                              estimation_of_variance(n,variance,alpha)
-						:n:  number of  elements in the data
-						:variance: variance of data 
-						:alpha:level of significance
->Estimation of variance difference	: Calculate the interval for population mean for confidence interval (1-alpha)*100
-                            				estimation_of_Ratiovariance(n1,variance1,n2,variance2,alpha)
-						:n1:  number of  elements in the first data
-						: variance1:  variance of first data  
-						:alpha:level of significance
-						:n2:  number of  elements in the second data
-						:variance2: variance of second data 
-### >non_parametric() 			: function to perform these functions-
-                   				1.SIGN TEST  2.WILCOXON SIGNED RANK TEST  3.MANN-WHITNEY TEST  4.KRUSKAL WALLIS TEST  
+* Estimation of variance		: Calculate the interval for population variance for confidence interval (1-alpha)*100
+> estimation_of_variance(n,variance,alpha)
+> :n:  number of  elements in the data
+> :variance: variance of data 
+> :alpha:level of significance
+
+* Estimation of variance difference	: Calculate the interval for population mean for confidence interval (1-alpha)*100
+> estimation_of_Ratiovariance(n1,variance1,n2,variance2,alpha)
+> :n1:  number of  elements in the first data
+> : variance1:  variance of first data  
+> :alpha:level of significance
+> :n2:  number of  elements in the second data
+> :variance2: variance of second data 
+### non_parametric() 			: function to perform these functions-
+ 1.SIGN TEST  2.WILCOXON SIGNED RANK TEST  3.MANN-WHITNEY TEST  4.KRUSKAL WALLIS TEST  
 
 
 * signTest(med,set,alpha) 		: function returns 0 (to signify null hypothesis is rejected) or returns 1 (Null hypotheses is accepted)
                           
-  >                       			: Input parameters:
-  >                       			 	mew : taken from user
-  >                       				 set : vector taken from user
-  >                       				 alpha : level of significance
+  >              : Input parameters:
+  >                 mew : taken from user
+  >                 set : vector taken from user
+  >                 alpha : level of significance
 
 
 * wilcoxon_srt(mew,set,reln,alpha) 	: function returns 0 (to signify null hypothesis is rejected) or returns 1 (Null hypotheses is accepted)
 
->                                   		:Input parameters:
->                                  			 mew : taken from user
->                                   			set : vector taken from user
->                                  			 reln : takes values 1,2,3 from user and signifies:
->                                          			1 : mew not equal mew_not
->                                         			2 : mew > mew_not
->                                          			3 : mew < mew_not
->                                  			alpha : level of significance
+>               :Input parameters:
+>                mew : taken from user
+>                set : vector taken from user
+>                reln : takes values 1,2,3 from user and signifies:
+>                1 : mew not equal mew_not
+>                2 : mew > mew_not
+>                3 : mew < mew_not
+>                alpha : level of significance
 
 
 * Mann_whitney_test(x,y,reln,alpha) 	: function returns 0 (to signify null hypothesis is rejected) or returns 1 (Null hypotheses is accepted)
 
-  >                                 		:Input parameters:
-  >                                			 x : set x taken from user
-  >                                			 y : vector taken from user
-  >                                 			reln : takes values 1,2,3 from user and signifies:
-  >                                        			1 : mew not equal mew_not
-  >                                        			2 : mew > mew_not
-  >                                        			3 : mew < mew_not
-  >                                 			alpha : level of significance
+  >            :Input parameters:
+  >            	 x : set x taken from user
+  >            	 y : vector taken from user
+  >            	 reln : takes values 1,2,3 from user and signifies:
+  >              1 : mew not equal mew_not
+  >              2 : mew > mew_not
+  >              3 : mew < mew_not
+  >              alpha : level of significance
 
 
 * Kruskal_wallis_test(x,y,z,alpha)	: function returns 0 (to signify null hypothesis is rejected) or returns 1 (Null hypotheses is accepted)
 >
 >         :Input parameters:
->             			 x : set x vector taken from user
->              			y : set y vector taken from user
->              			z : set z vector taken from user
-> 	       		    	alpha : level of significance
+>             	 x : set x vector taken from user
+>              	y : set y vector taken from user
+>              	z : set z vector taken from user
+> 	       	alpha : level of significance
 
 ### > hist()    			: We can create histograms with the function hist(x) where x is a numeric vector of values to be plotted. 
 
@@ -326,7 +328,7 @@ It compares calculated chi sqaure value from value from table And returns 0 (to 
 
 * barplot() 		: Bar graph can be created in R using the barplot() function. 
 
-* pie()  			: In R the pie chart is created using the pie() function which takes positive numbers as a vector input.
+* pie()  		: In R the pie chart is created using the pie() function which takes positive numbers as a vector input.
 
 * boxplot() 		: A Boxplot is an exploratory graphic that allows you to summarize the features of quantitative variables for one or several levels of a discrete variable. In R, it is done by using boxplot().
 
